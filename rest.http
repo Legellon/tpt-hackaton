@@ -2,8 +2,12 @@ POST http://localhost:3000/user/subscribe
 Content-Type: application/json
 
 {
-    "email" : "nikita.rehemae@gmail.com"
+    "email" : "nikita.rrehemae@gmail.com"
 }
 
 ###
-GET http://localhost:3000/user/activate/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im5pa2l0YS5yZWhlbWFlQGdtYWlsLmNvbSIsImlhdCI6MTYzOTY0MjYyMiwiZXhwIjoxNjM5NjQyNjgyfQ.uOnkK9DVCtf7QBX4mZLC9bZFKZJMypBRRFQ5p5xnWW0
+GET http://localhost:3000/user/activate/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im5pa2l0YS5ycmVoZW1hZUBnbWFpbC5jb20iLCJpYXQiOjE2Mzk2NDM5MjAsImV4cCI6MTYzOTY0NTcyMH0.vzaE7ckTzIL4UtHNewXemHeQn1XcZKRHIOmC5UA_xT0
+
+###
+
+GET http://localhost:3000/
