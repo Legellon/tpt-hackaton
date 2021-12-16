@@ -3,7 +3,7 @@ const SubscriberController = require('../controllers/subscriber');
 
 const router = express.Router();
 
-router.post('/subscribe', SubscriberController.subscribeHandle);
-router.get('/activate/:token', SubscriberController.activateHandle);
+router.post('/subscribe', SubscriberController.handleSubscribe);
+router.get('/activate/:token', SubscriberController.activateEmail);
 
 module.exports = router;

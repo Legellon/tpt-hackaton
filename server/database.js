@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const dbUrl = 'mongodb+srv://admin:admin@cluster0.8q9jp.mongodb.net/test';
+const dbUrl = 'mongodb://localhost:27017/hackathon-db';
 
 mongoose.connect(dbUrl, {useNewUrlParser: true});
 const conn = mongoose.connection;
