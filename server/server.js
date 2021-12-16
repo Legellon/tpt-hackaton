@@ -1,17 +1,15 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const AuthRoute = require('./routes/auth');
+const SubscriberRoutes = require('./routes/subscriber');
+const connection = require('./database')
 
-const SERVER_PORT = 15000;
+const SERVER_PORT = 3000;
 
 const server = express();
 
 server.use(express.json());
-server.use(express.urlencoded({
-    extended: false
-}));
 
-server.use('/', AuthRoute);
+server.use('/user', SubscriberRoutes);
 
 server.listen(SERVER_PORT, () => {
     console.log(`Server started on ${SERVER_PORT} port.`);

@@ -1,8 +1,9 @@
-POST http://localhost:15000/register
+POST http://localhost:3000/user/subscribe
 Content-Type: application/json
 
 {
-    "name" : "Nikita",
-    "email" : "nikita.NErehemae@gmail.com",
-    "password": "password"
+    "email" : "nikita.rehemae@gmail.com"
 }
+
+###
+GET http://localhost:3000/user/activate/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im5pa2l0YS5yZWhlbWFlQGdtYWlsLmNvbSIsImlhdCI6MTYzOTY0MjYyMiwiZXhwIjoxNjM5NjQyNjgyfQ.uOnkK9DVCtf7QBX4mZLC9bZFKZJMypBRRFQ5p5xnWW0

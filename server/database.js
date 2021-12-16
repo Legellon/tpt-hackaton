@@ -1,8 +1,12 @@
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb://localhost/hackathon-mongodb', {useNewUrlParser: true});
-const connection = mongoose.connection;
+const dbUrl = 'mongodb://localhost:27017/hackathon-db';
 
-connection.on('connected', () => {
-    console.log('database is connected successfully');
+mongoose.connect(dbUrl, {useNewUrlParser: true});
+const conn = mongoose.connection;
+
+conn.on('connected', () => {
+    console.log('Database is connected successfully');
 });
+
+module.exports = conn;
