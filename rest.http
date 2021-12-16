@@ -2,7 +2,7 @@ POST http://localhost:3000/user/subscribe
 Content-Type: application/json
 
 {
-    "email" : "nikita.rrehemae@gmail.com"
+    "email" : "anton.nich00@gmail.com"
 }
 
 ###
