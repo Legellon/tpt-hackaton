@@ -54,6 +54,7 @@ exports.activateEmail = (req, res) => {
                                 message: 'Email alredy exist',
                                 status: false
                             });
+                            console.log("Email already exists: " + email);
                         }
                         else {
                             const subscriber = new Subscriber({
@@ -66,6 +67,7 @@ exports.activateEmail = (req, res) => {
                                 message: 'Account activated',
                                 status: true
                             });
+                            console.log("Account activated: " + email);
                         }
                     });
             }
