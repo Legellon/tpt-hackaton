@@ -1,7 +1,8 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const SubscriberRoutes = require('./routes/subscriber');
-const connection = require('./database')
+const ForecastRoutes = require('./routes/forecast');
+const connection = require('./database');
 
 const SERVER_PORT = 3000;
 
@@ -9,6 +10,7 @@ const server = express();
 
 server.use(express.json());
 
+server.use('/', ForecastRoutes);
 server.use('/user', SubscriberRoutes);
 
 server.listen(SERVER_PORT, () => {

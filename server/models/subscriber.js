@@ -8,10 +8,6 @@ const SubscriberSchema = new mongoose.Schema({
         unique: true,
         maxlength: 255
     },
-    verified: {
-        type: Boolean,
-        default: false
-    },
 }, {
     timestamps: true
 });
