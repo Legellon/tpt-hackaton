@@ -20,7 +20,7 @@ exports.handleSubscribe = (req, res) => {
                 const token = jwt.sign({ email }, SECRET_KEY, { expiresIn: '30m' });
                 const verifyURL = `http://localhost:3000/user/activate/${token}`;
 
-                emailer.send(email, "subject", verifyURL);
+                emailer.send(email, "Email verification", verifyURL);
 
                 //send activate mail
                 console.log(verifyURL);
@@ -54,6 +54,7 @@ exports.activateEmail = (req, res) => {
                                 message: 'Email alredy exist',
                                 status: false
                             });
+                            console.log("Email already exists: " + email);
                         }
                         else 
                         {
@@ -67,6 +68,7 @@ exports.activateEmail = (req, res) => {
                                 message: 'Account activated',
                                 status: true
                             });
+                            console.log("Account activated: " + email);
                         }
                     });
             }
