@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const jwt = require('jsonwebtoken');
 const Subscriber = require('../models/subscriber');
-const emailer = require('../../emailer.js');
+const emailer = require('../emailer');
 
 const SECRET_KEY = 'cf498712eeca69ffa1ac32aec178fc4d7f8a1c236b89173a5ceb154575fdfbca2814bbbd24eb387773a50d24c9cc9d5dca91';
 
@@ -55,7 +55,8 @@ exports.activateEmail = (req, res) => {
                                 status: false
                             });
                         }
-                        else {
+                        else 
+                        {
                             const subscriber = new Subscriber({
                                 _id: mongoose.Types.ObjectId(),
                                 email: email
@@ -71,7 +72,8 @@ exports.activateEmail = (req, res) => {
             }
         });
     }
-    else {
+    else 
+    {
         res.json({
             message: 'Somehting went wrong',
             status: false

@@ -1,25 +1,21 @@
 {
-  "name": "hackaton",
+  "name": "tpt-hackaton",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon server/server.js"
+    "start:back": "nodemon ./hackathon-server/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/espritdecorpss/tpt-hackaton.git"
   },
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "axios": "^0.24.0",
-    "body-parser": "^1.19.1",
-    "dotenv": "^10.0.0",
-    "express": "^4.17.1",
-    "express-session": "^1.17.2",
-    "jsonwebtoken": "^8.5.1",
-    "mongodb": "^4.2.2",
-    "mongoose": "^6.1.2",
-    "nodemailer": "^6.7.2",
-    "vue": "^2.6.14"
+  "bugs": {
+    "url": "https://github.com/espritdecorpss/tpt-hackaton/issues"
   },
+  "homepage": "https://github.com/espritdecorpss/tpt-hackaton#readme",
   "devDependencies": {
     "nodemon": "^2.0.15"
   }
