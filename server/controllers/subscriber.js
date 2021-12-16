@@ -5,7 +5,7 @@ const emailer = require('../../emailer.js');
 
 const SECRET_KEY = 'cf498712eeca69ffa1ac32aec178fc4d7f8a1c236b89173a5ceb154575fdfbca2814bbbd24eb387773a50d24c9cc9d5dca91';
 
-exports.subscribeHandle = (req, res) => {
+exports.handleSubscribe = (req, res) => {
     const { email } = req.body;
 
     Subscriber.findOne({ "email": email })
@@ -33,7 +33,7 @@ exports.subscribeHandle = (req, res) => {
         });
 }
 
-exports.activateHandle = (req, res) => {
+exports.activateEmail = (req, res) => {
     const { token } = req.params;
 
     if (token) {
