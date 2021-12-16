@@ -19,7 +19,7 @@ module.exports = {
             from: "hackathontpt@gmail.com",
             to: email,
             subject: subject,
-            text: text
+            text: "Hey! \n\nThank you for using our services. To activate your email, you need to go to the following link:\n" + text
         };
 
         transporter.sendMail(mailOptions, function (err, success) {
