@@ -22,9 +22,6 @@ exports.handleSubscribe = (req, res) => {
 
                 emailer.send(email, "Email verification", verifyURL);
 
-                //send activate mail
-                console.log(verifyURL);
-
                 res.json({
                     message: 'Confirm your email',
                     status: true
@@ -54,7 +51,6 @@ exports.activateEmail = (req, res) => {
                                 message: 'Email alredy exist',
                                 status: false
                             });
-                            console.log("Email already exists: " + email);
                         }
                         else 
                         {
@@ -68,7 +64,6 @@ exports.activateEmail = (req, res) => {
                                 message: 'Account activated',
                                 status: true
                             });
-                            console.log("Account activated: " + email);
                         }
                     });
             }

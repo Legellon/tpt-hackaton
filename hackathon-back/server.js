@@ -1,16 +1,23 @@
+require('dotenv').config();
 const express = require('express');
 const bodyParser = require('body-parser');
-const Emitter = require('events');
 const cron = require('node-cron');
+const cors = require('cors');
 
 const SubscriberRoutes = require('./routes/subscriber');
 const ForecastRoutes = require('./routes/forecast');
 
 const connection = require('./database');
 
-const SERVER_PORT = 3000;
+const PORT = process.env.SERVER_PORT;
 
 const server = express();
+
+server.use(express.json());
+server.use(cors());
+
+server.use('/', ForecastRoutes);
+server.use('/user', SubscriberRoutes);
 
 cron.schedule('*/1 * * * *', () => {
     console.log(1);
@@ -19,11 +26,6 @@ cron.schedule('*/1 * * * *', () => {
     timezone: "Europe/Tallinn"
 });
 
-server.use(express.json());
-
-server.use('/', ForecastRoutes);
-server.use('/user', SubscriberRoutes);
-
-server.listen(SERVER_PORT, () => {
-    console.log(`Server started on ${SERVER_PORT} port.`);
+server.listen(PORT, () => {
+    console.log(`Server started on ${PORT} port.`);
 });
