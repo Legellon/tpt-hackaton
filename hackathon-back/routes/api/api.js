@@ -6,6 +6,6 @@ const ForecastRoutes = require('./forecast');
 const router = express.Router();
 
 router.use('/user', SubscriberRoutes);
-router.use('/forecasr', ForecastRoutes);
+router.use('/forecast', ForecastRoutes);
 
 module.exports = router;

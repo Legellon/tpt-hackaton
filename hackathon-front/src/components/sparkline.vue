@@ -48,10 +48,9 @@
     async created() {
       try {
         const data = await ForecastService.getForecast();
-
-        this.value = data.prices;
-
+        this.value = data;
       } catch(err) {
+        console.log(1);
         console.log(err);
       }
     }

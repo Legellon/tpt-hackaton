@@ -5,7 +5,7 @@ exports.getForecastData = (req, res) => {
 
     const currentDay = currentDate.getDay();
 
-    axios.get('https://dashboard.elering.ee/api/nps/price?start=2021-12-15T22%3A00%3A00.000Z&end=2021-12-16T21%3A00%3A00.000Z')
+    axios.get('https://dashboard.elering.ee/api/nps/price?start=2021-12-16T22%3A00%3A00.000Z&end=2021-12-17T21%3A00%3A00.000Z')
         .then((result) => {
             const forecast = result.data.data.ee;
             const originForecast = [...forecast];
