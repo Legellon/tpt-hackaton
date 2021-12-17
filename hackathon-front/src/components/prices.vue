@@ -1,5 +1,5 @@
 <template>
-   <div style="display:flex; flex-direction:row"> 
+   <div class="cards"> 
     <cardminimum></cardminimum>
     <cardnow></cardnow>
     <cardmaximum></cardmaximum>
@@ -7,9 +7,9 @@
 </template>
 
 <script>
-import Cardminimum from './components/cards/cardminimum.vue';
-import Cardnow from './components/cards/cardnow.vue';
-import Cardmaximum from './components/cards/cardmaximum.vue';
+import Cardminimum from './cards/cardminimum.vue';
+import Cardnow from './cards/cardnow.vue';
+import Cardmaximum from './cards/cardmaximum.vue';
 export default {
     components: {Cardminimum, Cardnow, Cardmaximum},
 }

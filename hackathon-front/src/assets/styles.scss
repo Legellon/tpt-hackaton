@@ -1,5 +1,28 @@
 @import "./variables.scss";
 
 body{
-   background-color: $bgrnd-color; 
+   background-color: $bgrnd-color;
+   .cards{
+      display:flex; 
+      flex-direction:row; 
+      margin-top: $cards-space;
+      .mx-auto{
+         width: $card-width;
+         height: $card-height;
+         .v-card-title{
+            font-size:3rem;
+            text-align:center; 
+         }
+         .v-card-text{
+            font-size:5rem; 
+            text-align:center; 
+            padding-top:3rem;
+         }
+         h1{
+            text-align:center; 
+            padding-top:3rem;
+         }
+      }
+   }
+
 }

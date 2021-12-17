@@ -1,7 +1,7 @@
 <template>
     <v-app-bar
        color="#d6c2bc"
-    >
+    > 
     </v-app-bar>
 </template>
 

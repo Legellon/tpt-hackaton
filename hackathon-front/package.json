@@ -1,5 +1,5 @@
 {
-  "name": "hackathon-front",
+  "name": "web",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -8,9 +8,8 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
-    "chart.js": "^3.6.2",
+    "axios": "^0.24.0",
     "core-js": "^3.6.5",
-    "hchs-vue-charts": "^1.2.8",
     "vue": "^2.6.11",
     "vue-router": "^3.2.0",
     "vuetify": "^2.4.0",

@@ -1,21 +1,19 @@
 <template>
-
+<div class="card">
   <v-card
     class="mx-auto"
-    width="350"
-    height="300"
-
-    style="margin-left: 80px;"
-    color="#d6c2bc"
+    color="#80CBC4"
   >
-    <v-card-title style="font-size:3rem; padding-left:2rem">
-        Minimal price
+    <v-card-title class="v-card-title">
+        Minimum price
     </v-card-title>
 
-    <v-card-text style="font-size:5rem; text-align:center; padding-top:3rem">
+    <v-card-text class="v-card-text">
       120
     </v-card-text>
+        <h1>at: 05:00</h1>
   </v-card>
+  </div>
 </template>
 
 <script>

@@ -1,20 +1,18 @@
 <template>
-
+<div class="card">
   <v-card
     class="mx-auto"
-    width="350"
-    height="300"
-
-    style=" margin-left: 80px;"
-    color="#d6c2bc"
+    color="#F06292"
   >
-    <v-card-title style="font-size:3rem;">
+    <v-card-title class="v-card-title">
         Maximum price
     </v-card-title>
-    <v-card-text style="font-size:5rem; text-align:center; padding-top:3rem">
+    <v-card-text class="v-card-text">
       140
     </v-card-text>
+    <h1>at: 18:00</h1>
   </v-card>
+  </div>
 </template>
 
 <script>

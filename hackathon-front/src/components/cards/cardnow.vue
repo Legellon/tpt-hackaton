@@ -1,20 +1,17 @@
 <template>
-
+<div class="card">
   <v-card
     class="mx-auto"
-    width="350"
-    height="300"
-
-    style=" margin-left: 80px;"
-    color="#d6c2bc"
+    color="#81D4FA"
   >
-    <v-card-title style="font-size:3rem; padding-left:4rem">
+    <v-card-title class="v-card-title">
         Price now
     </v-card-title>
-    <v-card-text style="font-size:5rem; text-align:center; padding-top:3rem">
+    <v-card-text class="v-card-text">
       124
     </v-card-text>
   </v-card>
+  </div>
 </template>
 
 <script>
