@@ -4,8 +4,9 @@ const bodyParser = require('body-parser');
 const cron = require('node-cron');
 const cors = require('cors');
 
-const SubscriberRoutes = require('./routes/subscriber');
-const ForecastRoutes = require('./routes/forecast');
+const SubscriberRoutes = require('./routes/api/subscriber');
+const ForecastRoutes = require('./routes/api/forecast');
+const ApiRoutes = require('./routes/api/api');
 
 const connection = require('./database');
 
@@ -16,8 +17,7 @@ const server = express();
 server.use(express.json());
 server.use(cors());
 
-server.use('/', ForecastRoutes);
-server.use('/user', SubscriberRoutes);
+server.use('/api', ApiRoutes);
 
 cron.schedule('*/1 * * * *', () => {
     console.log(1);

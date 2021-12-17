@@ -10,14 +10,16 @@ exports.getForecastData = (req, res) => {
             const forecast = result.data.data.ee;
             const originForecast = [...forecast];
 
+            console.log(originForecast)
+
             forecast.sort((a, b) => a.price - b.price);
 
             const minimumHours = [];
             const maximumHours = [];
 
             for (let i = 1; i <= 4; i++) {
-                cheapHours.push(forecast[i - 1]);
-                expensiveHours.push(forecast[forecast.length - i]);
+                minimumHours.push(forecast[i - 1]);
+                maximumHours.push(forecast[forecast.length - i]);
             }
 
             res.json({

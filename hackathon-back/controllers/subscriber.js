@@ -18,7 +18,7 @@ exports.handleSubscribe = (req, res) => {
             }
             else {
                 const token = jwt.sign({ email }, SECRET_KEY, { expiresIn: '30m' });
-                const verifyURL = `http://localhost:3000/user/activate/${token}`;
+                const verifyURL = `http://localhost:8000/user/activate/${token}`;
 
                 emailer.send(email, "Email verification", verifyURL);
 
